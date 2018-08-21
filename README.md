@@ -1,4 +1,4 @@
-Marian's Java Bill Of Materials
+Marian's Java Bill Of Materials [![Build Status](https://travis-ci.org/zaplatynski/java-bom.svg?branch=master)](https://travis-ci.org/zaplatynski/java-bom)
 ================================
 
 This is a bill of materials (BOM) suitable for most OpenSource Java projects as Maven parent pom.
