@@ -1,5 +1,5 @@
 ---
-title: Maven Package Type For FirstSpirit Modules
+title: Maven Bill Of Materials (BOM) for Java OSS projects
 ---
 
 # Welcome!
