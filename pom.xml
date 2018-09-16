@@ -258,7 +258,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>buildnumber-maven-plugin</artifactId>
-				<version>$buildnumber-plugin.version}</version>
+				<version>${buildnumber-plugin.version}</version>
 				<executions>
 					<execution>
 						<id>buildnumber-validate</id>
