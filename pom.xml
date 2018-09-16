@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.zaplatynski</groupId>
 	<artifactId>java-bom</artifactId>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 	<packaging>pom</packaging>
 	<name>Marian's Java Bill Of Materials</name>
 	<description>Marian's Java Bill Of Materials (BOM) is used as common configuration for typical Java (OSS) projects in Maven</description>
@@ -64,6 +64,7 @@
 		<maven.jar.plugin.version>3.1.0</maven.jar.plugin.version>
 		<maven.source.plugin.version>3.0.1</maven.source.plugin.version>
 		<maven.javadoc.plugin.version>3.0.1</maven.javadoc.plugin.version>
+		<buildnumber-plugin.version>1.4</buildnumber-plugin.version>
 	</properties>
 
 	<dependencyManagement>
@@ -149,7 +150,7 @@
 						</goals>
 						<configuration>
 							<rules>
-								<dependencyConvergence />
+								<banCircularDependencies />
 								<reactorModuleConvergence>
 									<ignoreModuleDependencies>true</ignoreModuleDependencies>
 								</reactorModuleConvergence>
@@ -234,6 +235,7 @@
 								</manifest>
 								<manifestEntries>
 									<Description>${project.description}</Description>
+									<Implementation-Build>${buildNumber}</Implementation-Build>
 								</manifestEntries>
 							</archive>
 						</configuration>
@@ -250,6 +252,35 @@
 						<goals>
 							<goal>jar</goal>
 						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>buildnumber-maven-plugin</artifactId>
+				<version>$buildnumber-plugin.version}</version>
+				<executions>
+					<execution>
+						<id>buildnumber-validate</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>create</goal>
+						</goals>
+						<configuration>
+							<doCheck>false</doCheck>
+							<doUpdate>false</doUpdate>
+						</configuration>
+					</execution>
+					<execution>
+						<id>buildnumber-create</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>create-metadata</goal>
+						</goals>
+						<configuration>
+							<attach>false</attach>
+							<addOutputDirectoryToResources>true</addOutputDirectoryToResources>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
