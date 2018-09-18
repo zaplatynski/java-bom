@@ -23,7 +23,7 @@ Just reference the BOM as the parent POM in your project's pom.xml:
 	<parent>
 		<groupId>com.github.zaplatynski</groupId>
 		<artifactId>java-bom</artifactId>
-		<version>1.1.1</version>
+		<version>1.1.2</version>
 	</parent>
 	
 	...
@@ -42,7 +42,7 @@ All versions are stored inside properties for easy adaption e.g. use Java 7 inst
 	<parent>
 		<groupId>com.github.zaplatynski</groupId>
 		<artifactId>java-bom</artifactId>
-		<version>1.1.1</version>
+		<version>1.1.2</version>
 	</parent>
 	
 	...
