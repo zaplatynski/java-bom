@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.zaplatynski</groupId>
 	<artifactId>java-bom</artifactId>
-	<version>1.1.0</version>
+	<version>1.1.1</version>
 	<packaging>pom</packaging>
 	<name>Marian's Java Bill Of Materials</name>
 	<description>Marian's Java Bill Of Materials (BOM) is used as common configuration for typical Java (OSS) projects in Maven</description>
@@ -128,12 +128,6 @@
 			<groupId>org.hamcrest</groupId>
 			<artifactId>hamcrest-library</artifactId>
 			<scope>test</scope>
-			<exclusions>
-				<exclusion>
-					<groupId>org.hamcrest</groupId>
-					<artifactId>hamcrest-core</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 	</dependencies>
 
