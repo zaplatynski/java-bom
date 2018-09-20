@@ -1,7 +1,7 @@
 Marian's Java Bill Of Materials [![Build Status](https://travis-ci.org/zaplatynski/java-bom.svg?branch=master)](https://travis-ci.org/zaplatynski/java-bom)
 ================================
 
-This is a bill of materials (BOM) suitable for most OpenSource Java projects as Maven parent pom.
+This is a bill of materials (BOM) suitable for most OpenSource Java projects as Maven parent pom using Java 8. There is no Java 9+ support at the moment.
 
 It configures:
 * The Maven Java compiler plugin to a *certain version*, e.g. 8 (1.8)
@@ -48,7 +48,7 @@ All versions are stored inside properties for easy adaption e.g. use Java 7 inst
 	...
 	
 	<properties>
-		<java.version>1.7<version>
+		<java.version>1.7</java.version>
 	</properties>
 	
 	...
